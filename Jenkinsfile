@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy to Apache') {
             steps {
                 script {
-                    def sourceDir = "C:\\Users\\HP\Desktop\\tourist-website-main"
+                    def sourceDir = "C:\Users\HP\Desktop\tourist-website-main"
                     def targetDir = "C:\\Apache24\\htdocs"
                     def copyResult = bat(script: "xcopy /s /e /y \"$sourceDir\" \"$targetDir\"", returnStatus: true)
                     if (copyResult == 0) {
